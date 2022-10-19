@@ -13,19 +13,19 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 public class contactController {
 
-    private final ContactService contactService;
+	private final ContactService contactService;
 
-    @Autowired
-    public contactController(ContactService contactService) {
-        this.contactService = contactService;
-    }
+	@Autowired
+	public contactController(ContactService contactService) {
+		this.contactService = contactService;
+	}
 
-    @RequestMapping("/contact")
-    public String displayContactPage() {
-        return "contact.html";
-    }
+	@RequestMapping("/contact")
+	public String displayContactPage() {
+		return "contact.html";
+	}
 
-    /*@RequestMapping(value = "/saveMsg",method = POST)
+	/*@RequestMapping(value = "/saveMsg",method = POST)
     public ModelAndView saveMessage(@RequestParam String name, @RequestParam String mobileNum,
                                     @RequestParam String email, @RequestParam String subject, @RequestParam String message) {
         log.info("Name : " + name);
@@ -36,11 +36,12 @@ public class contactController {
         return new ModelAndView("redirect:/contact");
     }*/
 
-    @RequestMapping(value = "/saveMsg",method = POST)
-    public ModelAndView saveMessage(Contact contact){
-        contactService.saveMessageDetails(contact);
-        return new ModelAndView("redirect:/contact");
-    }
+	@RequestMapping(value = "/saveMsg",method = POST)
+	public ModelAndView saveMessage(Contact contact){
+		contactService.saveMessageDetails(contact);
+		
+		return new ModelAndView("redirect:/contact");
+	}
 
 
 
