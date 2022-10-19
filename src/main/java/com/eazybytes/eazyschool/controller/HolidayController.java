@@ -5,8 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import com.eazybytes.eazyschool.Holiday;
-import com.eazybytes.eazyschool.Holiday.Type;
+import com.eazybytes.eazyschool.model.Holiday;
+import com.eazybytes.eazyschool.model.Holiday.Type;
 
 @Controller
 public class HolidayController {
