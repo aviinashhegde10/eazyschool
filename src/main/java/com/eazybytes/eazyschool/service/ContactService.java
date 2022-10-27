@@ -11,7 +11,7 @@ public class ContactService {
 	 public boolean saveMessageDetails(Contact contact){
 	        boolean isSaved = true;
 	        //TODO - Need to persist the data into the DB table
-	        System.out.println(contact.toString());
+	        System.out.println(contact.getName());
 	        return isSaved;
 	    }
 }
